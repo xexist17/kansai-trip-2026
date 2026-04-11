@@ -1,0 +1,1430 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>關西 6 日完整攻略 — 2026/04/16–21</title>
+<style>
+  :root {
+    --bg: #fafafa;
+    --card: #ffffff;
+    --ink: #1a1a1a;
+    --muted: #666;
+    --line: #e5e5e5;
+    --accent: #d64545;
+    --jr: #1b8e4e;
+    --hanshin: #0056a7;
+    --kintetsu: #c8102e;
+    --portliner: #ff6b00;
+    --cable: #6b4423;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, "Noto Sans TC", "PingFang TC", "Hiragino Sans", "Microsoft JhengHei", system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.55;
+    -webkit-text-size-adjust: 100%;
+  }
+  header {
+    background: linear-gradient(135deg, #1a1a1a 0%, #333 100%);
+    color: #fff;
+    padding: 24px 20px 20px;
+  }
+  header h1 { margin: 0 0 4px; font-size: 22px; font-weight: 700; }
+  header .dates { opacity: 0.7; font-size: 14px; }
+  header .intro {
+    margin-top: 14px;
+    padding: 12px 14px;
+    background: rgba(255,255,255,0.08);
+    border-left: 3px solid var(--accent);
+    font-size: 13px;
+    line-height: 1.6;
+    border-radius: 4px;
+  }
+  main { padding: 8px 16px 40px; max-width: 820px; margin: 0 auto; }
+
+  .nav-toc {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin: 16px 0 20px;
+  }
+  .nav-toc h2 { margin: 0 0 8px; font-size: 14px; color: var(--muted); font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase; }
+  .nav-toc ul { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 6px 10px; }
+  .nav-toc a {
+    display: inline-block;
+    padding: 8px 14px;
+    background: #f0f0f0;
+    border-radius: 16px;
+    color: var(--ink);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+  }
+  .nav-toc a:active { background: #e0e0e0; }
+  .nav-toc a.primary { background: var(--accent); color: #fff; }
+
+  /* 折疊式 Day 區塊 */
+  details.day {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    margin: 0 0 18px;
+    overflow: hidden;
+  }
+  details.day > summary {
+    padding: 14px 18px;
+    background: var(--accent);
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  details.day > summary::-webkit-details-marker { display: none; }
+  details.day > summary::after {
+    content: "▼";
+    font-size: 11px;
+    opacity: 0.75;
+    transition: transform 0.15s;
+  }
+  details.day[open] > summary::after { transform: rotate(180deg); }
+  details.day > summary .sub { font-weight: 400; opacity: 0.9; font-size: 12px; margin-left: 8px; }
+  details.day .day-body { padding: 14px 16px 18px; }
+
+  /* 行程總覽表格 */
+  .overview-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12.5px;
+    margin: 0 0 16px;
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  .overview-table th,
+  .overview-table td {
+    padding: 7px 8px;
+    text-align: left;
+    border-bottom: 1px solid var(--line);
+    vertical-align: top;
+  }
+  .overview-table th {
+    background: #f5f5f5;
+    font-size: 11.5px;
+    font-weight: 700;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+  }
+  .overview-table tr:last-child td { border-bottom: none; }
+  .overview-table td:first-child { white-space: nowrap; color: #b33; font-weight: 600; font-size: 12px; }
+  .overview-table td:last-child { white-space: nowrap; color: #666; font-size: 12px; text-align: right; }
+
+  /* 區段 (segment) — 一段交通 */
+  .segment {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    margin: 0 0 14px;
+    overflow: hidden;
+  }
+  .segment > .seg-head {
+    padding: 12px 14px 10px;
+    background: #fafafa;
+    border-bottom: 1px solid var(--line);
+  }
+  .segment .seg-title {
+    font-size: 15px;
+    font-weight: 700;
+    margin: 0 0 3px;
+    color: #222;
+  }
+  .segment .seg-meta {
+    font-size: 12px;
+    color: var(--muted);
+    line-height: 1.5;
+  }
+  .segment .seg-meta strong { color: var(--accent); }
+
+  .seg-body { padding: 10px 14px 6px; }
+
+  .steps {
+    margin: 0 0 10px;
+    padding-left: 22px;
+    font-size: 13.5px;
+    line-height: 1.7;
+  }
+  .steps li { margin-bottom: 3px; }
+
+  .note-box {
+    margin: 10px 0;
+    padding: 10px 12px;
+    background: #fffbe6;
+    border-left: 3px solid #e6c200;
+    border-radius: 4px;
+    font-size: 12.5px;
+    line-height: 1.6;
+  }
+  .note-box strong { color: #8a6d00; }
+  .note-box ul { margin: 4px 0 0; padding-left: 18px; }
+  .note-box li { margin-bottom: 2px; }
+
+  .hotel-box {
+    margin: 10px 0;
+    padding: 10px 12px;
+    background: #e8f4fd;
+    border-left: 3px solid #4285f4;
+    border-radius: 4px;
+    font-size: 12.5px;
+    line-height: 1.6;
+  }
+  .hotel-box strong { color: #1967d2; }
+  .hotel-box ul { margin: 4px 0 0; padding-left: 18px; }
+
+  /* 車站實景導航卡 (從 v1 HTML 移植) */
+  section.station {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    margin: 10px 0 14px;
+    overflow: hidden;
+  }
+  section.station > .head {
+    padding: 12px 14px 10px;
+    border-bottom: 1px solid var(--line);
+  }
+  section.station .station-name {
+    font-size: 15px;
+    font-weight: 700;
+    margin: 0 0 2px;
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  section.station .station-name .romaji { font-size: 12px; color: var(--muted); font-weight: 500; }
+  section.station .lines { margin: 6px 0 2px; display: flex; flex-wrap: wrap; gap: 5px; }
+  .line-tag {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 3px;
+    font-size: 11px;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 0.3px;
+  }
+  .line-jr { background: var(--jr); }
+  .line-hanshin { background: var(--hanshin); }
+  .line-hankyu { background: #831b35; }
+  .line-kintetsu { background: var(--kintetsu); }
+  .line-port { background: var(--portliner); }
+  .line-subway { background: #009933; }
+  .line-cable { background: var(--cable); }
+  .line-ropeway { background: #2d8aa5; }
+  .line-nankai { background: #00539b; }
+
+  section.station .brief {
+    padding: 10px 14px;
+    font-size: 13px;
+    background: #fffbe6;
+    border-bottom: 1px solid #f0e5a0;
+  }
+  section.station .brief strong { color: #8a6d00; }
+
+  .videos { padding: 6px 10px 8px; }
+  .video {
+    display: flex;
+    gap: 12px;
+    padding: 8px 6px;
+    border-bottom: 1px solid #f3f3f3;
+    text-decoration: none;
+    color: var(--ink);
+  }
+  .video:last-child { border-bottom: none; }
+  .video:active { background: #f5f5f5; }
+  .video .thumb { flex: 0 0 140px; position: relative; }
+  .video .thumb img {
+    width: 100%;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 6px;
+    background: #ddd;
+    display: block;
+  }
+  .video .thumb::after {
+    content: "▶";
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 34px; height: 34px;
+    background: rgba(0,0,0,0.75);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    padding-left: 3px;
+  }
+  .video .meta { flex: 1; min-width: 0; display: flex; flex-direction: column; justify-content: space-between; }
+  .video .title {
+    font-size: 12.5px;
+    font-weight: 500;
+    line-height: 1.4;
+    margin: 0 0 4px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .video .tag { font-size: 11px; color: var(--muted); }
+
+  .actions {
+    padding: 8px 14px 14px;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .btn {
+    display: inline-block;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    border: 1px solid var(--line);
+    color: var(--ink);
+    background: #f8f8f8;
+  }
+  .btn.primary { background: #4285f4; color: #fff; border-color: #4285f4; }
+  .btn:active { opacity: 0.7; }
+
+  /* 附錄表格 */
+  .appendix-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12.5px;
+    margin: 0 0 14px;
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  .appendix-table th,
+  .appendix-table td {
+    padding: 8px 10px;
+    text-align: left;
+    border-bottom: 1px solid var(--line);
+    vertical-align: top;
+  }
+  .appendix-table th {
+    background: #f5f5f5;
+    font-size: 11.5px;
+    font-weight: 700;
+    color: var(--muted);
+    text-transform: uppercase;
+  }
+  .appendix-table tr:last-child td { border-bottom: none; }
+  .appendix-table .ja { color: #333; font-size: 13px; }
+  .appendix-table .ro { color: var(--muted); font-size: 11px; font-style: italic; }
+
+  details.section {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    margin: 0 0 14px;
+    overflow: hidden;
+  }
+  details.section > summary {
+    padding: 12px 16px;
+    background: #f5f5f5;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  details.section > summary::-webkit-details-marker { display: none; }
+  details.section > summary::after {
+    content: "▼";
+    font-size: 10px;
+    opacity: 0.5;
+    transition: transform 0.15s;
+  }
+  details.section[open] > summary::after { transform: rotate(180deg); }
+  details.section .sec-body { padding: 14px 16px; }
+
+  h3.sub-h {
+    margin: 14px 0 8px;
+    font-size: 13px;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 700;
+  }
+
+  footer {
+    padding: 20px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 12px;
+    border-top: 1px solid var(--line);
+    margin-top: 20px;
+  }
+  footer a { color: var(--accent); }
+
+  @media (max-width: 520px) {
+    header h1 { font-size: 19px; }
+    .video .thumb { flex: 0 0 110px; }
+    .video .thumb img { height: 62px; }
+    .segment .seg-title { font-size: 14px; }
+    details.day > summary { font-size: 15px; }
+    .overview-table { font-size: 11.5px; }
+    .overview-table th, .overview-table td { padding: 6px 6px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>關西 6 日完整攻略</h1>
+  <div class="dates">2026/04/16 (四) — 2026/04/21 (二) · 神戶 ⇄ 奈良 ⇄ 吉野 ⇄ 京都 ⇄ 宇治</div>
+  <div class="intro">
+    每天是一個可展開的折疊區段，點標題就能打開/收起。<br>
+    裡面包含：當日行程表、交通路線、每段詳細步驟、車站實景導航影片、Google Maps 按鈕。<br>
+    影片縮圖點下去會開 YouTube 日本人實拍走路路線；Maps 按鈕會開手機的 Google Maps app。
+  </div>
+</header>
+
+<main>
+
+<nav class="nav-toc">
+  <h2>快速跳轉</h2>
+  <ul>
+    <li><a class="primary" href="#tickets">票券</a></li>
+    <li><a href="#day1">Day 1 · 4/16</a></li>
+    <li><a href="#day2">Day 2 · 4/17</a></li>
+    <li><a href="#day3">Day 3 · 4/18</a></li>
+    <li><a href="#day4">Day 4 · 4/19</a></li>
+    <li><a href="#day5">Day 5 · 4/20</a></li>
+    <li><a href="#day6">Day 6 · 4/21</a></li>
+    <li><a href="#appendix">附錄</a></li>
+    <li><a href="#bonus">備用</a></li>
+  </ul>
+</nav>
+
+<!-- ========================== 票券建議 ========================== -->
+<details class="section" id="tickets" open>
+  <summary>🎫 整體票券建議 (必看)</summary>
+  <div class="sec-body">
+    <p style="margin:0 0 10px; font-size:13.5px;">本次行程跨越多家鐵路公司（JR、近鐵、阪神、神戶市營），建議票券組合：</p>
+    <div class="note-box">
+      <strong>★ 推薦組合 ★</strong>
+      <ul>
+        <li><strong>KANSAI THRU PASS 3 日券</strong>（約 5,600 円）— 用於 Day 1、Day 2、Day 5（或 Day 6）</li>
+        <li><strong>ICOCA 卡</strong>儲值 2,000–3,000 円 — Day 3、Day 4 搭 JR 使用；整趟旅程當電子錢包</li>
+        <li>Day 2 吉野可用 KTP；若想搭特急則另購「特急券」(約 520 円/段)</li>
+      </ul>
+    </div>
+
+    <h3 class="sub-h">各票券比較表</h3>
+    <table class="overview-table">
+      <thead><tr><th>票券名稱</th><th>價格</th><th>涵蓋</th><th>日數</th><th>備註</th></tr></thead>
+      <tbody>
+        <tr><td style="color:#222;font-weight:600;">KANSAI THRU PASS</td><td>約 5,600 円</td><td>近鐵、阪神、神戶市巴士、Port Liner、摩耶纜車</td><td>3 日<br>非連續</td><td>★本次主力 / 含 Day 5 摩耶山</td></tr>
+        <tr><td style="color:#222;font-weight:600;">ICOCA 卡</td><td>2,000 円起</td><td>全關西 JR + 私鐵 + 便利商店</td><td>萬用</td><td>必買，退卡時可退押金</td></tr>
+        <tr><td style="color:#222;font-weight:600;">近鐵吉野特急套票</td><td>約 2,000 円起</td><td>大阪/奈良 ⇄ 吉野（含特急券）</td><td>Day 2</td><td>吉野當天買，可省時間</td></tr>
+        <tr><td style="color:#222;font-weight:600;">JR PASS 關西版</td><td>3,600 円（2 日）</td><td>JR 西日本主要路線</td><td>❌</td><td>只 2 天用 JR，不划算</td></tr>
+      </tbody>
+    </table>
+
+    <div class="note-box">
+      <strong>💡 購票地點</strong>
+      <ul>
+        <li><strong>KANSAI THRU PASS</strong>：神戶空港關西旅遊案內所、三宮站案內所、各近鐵大站</li>
+        <li><strong>ICOCA</strong>：JR 各站自動售票機、關西/神戶機場 JR 窗口</li>
+        <li><strong>近鐵吉野套票</strong>：近鐵奈良站、大阪難波站服務台</li>
+        <li>小技巧：關西機場有「Kansai Tourist Information Center」，可一次買齊</li>
+      </ul>
+    </div>
+  </div>
+</details>
+
+<!-- ========================== DAY 1 ========================== -->
+<details class="day" id="day1" open>
+  <summary>Day 1 · 4/16 (四) — 神戶機場 → 奈良 <span class="sub">抵達日</span></summary>
+  <div class="day-body">
+
+    <table class="overview-table">
+      <thead><tr><th>時間</th><th>行程</th><th>交通</th><th>費用</th></tr></thead>
+      <tbody>
+        <tr><td>12:30</td><td>神戶機場抵達 (UKB)</td><td>—</td><td>—</td></tr>
+        <tr><td>13:00</td><td>Port Liner → 三宮</td><td>Port Liner (18 分)</td><td>340 円</td></tr>
+        <tr><td>13:30</td><td>三宮 → 近鐵奈良</td><td>阪神・近鐵直通快速急行 (75 分)</td><td>1,100 円</td></tr>
+        <tr><td>15:00</td><td>近鐵奈良站下車</td><td>步行 3 分到飯店</td><td>—</td></tr>
+        <tr><td>15:10</td><td>Check-in 御宿野乃</td><td>—</td><td>—</td></tr>
+        <tr><td>晚間</td><td>奈良町散步 / 晚餐 / 泡湯</td><td>—</td><td>—</td></tr>
+      </tbody>
+    </table>
+
+    <!-- 1-1 -->
+    <div class="segment">
+      <div class="seg-head">
+        <div class="seg-title">1-1 · 神戶機場 → 三宮 (Port Liner)</div>
+        <div class="seg-meta">🚇 神戶新交通 ポートライナー ｜ <strong>18 分 · 340 円</strong></div>
+      </div>
+      <div class="seg-body">
+        <ol class="steps">
+          <li>飛機降落神戶機場 (UKB) 後，沿「Port Liner / Sannomiya」指標離開管制區。</li>
+          <li>走出到達大廳後，跟「ポートライナー」藍色指標，過空橋進入車站。</li>
+          <li>神戶機場站只有一個入口，走上 2F 剪票口。</li>
+          <li>購票：自動售票機 (有中文) 選「三宮」→ 340 円。有 KANSAI THRU PASS 直接感應過閘。</li>
+          <li>月台只有一條，往三宮方向；所有班次都停三宮，不用選車。</li>
+          <li>車程 18 分；Port Liner 是無人駕駛，第一節車廂正面風景最好。</li>
+          <li>終點「三宮」下車 → 跟「中央口 / JR / 阪神」指標走。</li>
+        </ol>
+        <div class="note-box">
+          <strong>⚠ 注意事項</strong>
+          <ul>
+            <li>首班約 05:40，末班約 24:00</li>
+            <li>神戶機場是 <strong>UKB</strong>，跟關西機場 KIX 完全不同，規模小很多</li>
+            <li>KANSAI THRU PASS 可使用；否則單程 340 円</li>
+            <li>不要走出機場搭計程車到三宮 (那要 3,000 円以上)</li>
+          </ul>
+        </div>
+
+        <section class="station" id="kobeair">
+          <div class="head">
+            <div class="station-name">神戸空港駅 <span class="romaji">Kobe Airport Sta.</span></div>
+            <div class="lines">
+              <span class="line-tag line-port">Port Liner 終點</span>
+            </div>
+          </div>
+          <div class="brief"><strong>重點：</strong>Port Liner 三宮搭到底就是神戶機場 (約 18 分鐘)。</div>
+          <div class="videos">
+            <a class="video" href="https://www.youtube.com/watch?v=jLuzrA8DlMA" target="_blank" rel="noopener">
+              <div class="thumb"><img src="https://i.ytimg.com/vi/jLuzrA8DlMA/mqdefault.jpg" alt=""></div>
+              <div class="meta">
+                <div class="title">神戸空港 飛機 → ポートライナー 乗換實拍</div>
+                <div class="tag">YouTube · 機場端示範</div>
+              </div>
+            </a>
+            <a class="video" href="https://www.youtube.com/watch?v=fpeVufNnytg" target="_blank" rel="noopener">
+              <div class="thumb"><img src="https://i.ytimg.com/vi/fpeVufNnytg/mqdefault.jpg" alt=""></div>
+              <div class="meta">
+                <div class="title">阪神神戸三宮駅 → ポートライナー三宮駅 無障礙走路路線</div>
+                <div class="tag">YouTube · 步驟清楚</div>
+              </div>
+            </a>
+          </div>
+          <div class="actions">
+            <a class="btn primary" href="https://www.google.com/maps/search/?api=1&query=Kobe+Airport+Station" target="_blank" rel="noopener">神戶機場 Maps</a>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- 1-2 -->
+    <div class="segment">
+      <div class="seg-head">
+        <div class="seg-title">1-2 · 三宮 → 近鐵奈良 (阪神・近鐵直通)</div>
+        <div class="seg-meta">🚆 阪神なんば線 → 近鉄奈良線 直通快速急行 ｜ <strong>約 75 分 · 1,100 円</strong></div>
+      </div>
+      <div class="seg-body">
+        <ol class="steps">
+          <li>Port Liner 三宮站下車，沿「JR / 阪神」指標往出口 2F 走。</li>
+          <li>出 Port Liner 剪票口 → 往「阪神神戶三宮駅」方向 (地下連通道，約 3 分)。</li>
+          <li>下到阪神三宮站 B1 剪票口，買票到「近鉄奈良」：1,100 円 (KTP 可用)。</li>
+          <li>進剪票口後下到 B2 月台 → 找「2 番線」(往近鉄奈良方向)。</li>
+          <li>電子板顯示「<strong>快速急行 近鉄奈良</strong>」時上車；不要搭普通或區間。</li>
+          <li>這是阪神・近鐵直通車，中途經過大阪難波、鶴橋，不用換車。</li>
+          <li>約 75 分後到終點「近鉄奈良」下車。</li>
+        </ol>
+        <div class="note-box">
+          <strong>⚠ 月台辨識訣竅</strong>
+          <ul>
+            <li>阪神神戶三宮是地下站，分上下月台，去奈良方向月台編號為 <strong>2</strong></li>
+            <li>車頭電子看板顯示「快速急行」橘色、「近鉄奈良」綠色字</li>
+            <li>部分車次只開到「近鉄難波」，要再換車；建議等直通車 (約每 15 分 1 班)</li>
+            <li>快速急行停站：尼崎 / 大阪難波 / 鶴橋 / 大和西大寺 / 近鉄奈良</li>
+            <li>末班車約 23:00 後；當天若延誤可先到大阪難波過夜</li>
+          </ul>
+        </div>
+
+        <section class="station" id="sannomiya">
+          <div class="head">
+            <div class="station-name">三ノ宮 / 三宮駅 <span class="romaji">Sannomiya Sta.</span></div>
+            <div class="lines">
+              <span class="line-tag line-jr">JR</span>
+              <span class="line-tag line-hanshin">阪神</span>
+              <span class="line-tag line-hankyu">阪急</span>
+              <span class="line-tag line-subway">地下鐵</span>
+              <span class="line-tag line-port">Port Liner</span>
+            </div>
+          </div>
+          <div class="brief"><strong>重點：</strong>三宮是 <strong>五家鐵道</strong>共用的站區，彼此的站是獨立建築，站內不直通。JR 叫「三ノ宮」，阪神/阪急/地鐵/Port Liner 叫「三宮」，走路換線要看站外街道指標。</div>
+          <div class="videos">
+            <a class="video" href="https://www.youtube.com/watch?v=DW_tcjAY_c8" target="_blank" rel="noopener">
+              <div class="thumb"><img src="https://i.ytimg.com/vi/DW_tcjAY_c8/mqdefault.jpg" alt=""></div>
+              <div class="meta">
+                <div class="title">JR三ノ宮駅 → 阪神神戸三宮駅 乗換方法</div>
+                <div class="tag">YouTube · 去阪神/難波方向必看</div>
+              </div>
+            </a>
+            <a class="video" href="https://www.youtube.com/watch?v=EJ3tKdXGozg" target="_blank" rel="noopener">
+              <div class="thumb"><img src="https://i.ytimg.com/vi/EJ3tKdXGozg/mqdefault.jpg" alt=""></div>
+              <div class="meta">
+                <div class="title">JR三ノ宮駅 → 地下鉄三宮駅 走路實拍</div>
+                <div class="tag">YouTube · 地下鐵西神山手線</div>
+              </div>
+            </a>
+            <a class="video" href="https://www.youtube.com/watch?v=jqZu7PtYf6g" target="_blank" rel="noopener">
+              <div class="thumb"><img src="https://i.ytimg.com/vi/jqZu7PtYf6g/mqdefault.jpg" alt=""></div>
+              <div class="meta">
+                <div class="title">JR三ノ宮駅 → Port Liner 最短路線</div>
+                <div class="tag">YouTube · 最短走法</div>
+              </div>
+            </a>
+          </div>
+          <div class="actions">
+            <a class="btn primary" href="https://www.google.com/maps/search/?api=1&query=三宮駅" target="_blank" rel="noopener">三宮駅 Maps</a>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- 1-3 -->
+    <div class="segment">
+      <div class="seg-head">
+        <div class="seg-title">1-3 · 近鐵奈良站 → 御宿野乃飯店</div>
+        <div class="seg-meta">🚶 步行 3 分 · 約 250 公尺</div>
+      </div>
+      <div class="seg-body">
+        <ol class="steps">
+          <li>下車後依「3 番出口 (東改札)」指標上樓出站。</li>
+          <li>出 3 號出口後正面是「三条通」商店街，朝右前方走。</li>
+          <li>沿三条通直走約 200 公尺，右邊會看到麥當勞 (地標)。</li>
+          <li>過麥當勞後在下一個路口左轉，走約 80 公尺。</li>
+          <li>右手邊就是「御宿 野乃 奈良」— 門口有日式暖簾和木質招牌。</li>
+          <li>全程平坦可拖行李；夜晚到也不用擔心，三条通商店街很亮。</li>
+        </ol>
+        <div class="hotel-box">
+          <strong>🏨 飯店資訊</strong>
+          <ul>
+            <li><strong>名稱：</strong>天然溫泉 吉野櫻之湯 御宿野乃 奈良</li>
+            <li><strong>地址：</strong>奈良県奈良市元林院町 23</li>
+            <li><strong>電話：</strong>+81-742-20-0111</li>
+            <li><strong>Check-in：</strong>15:00 起｜Check-out：11:00</li>
+            <li><strong>大浴場：</strong>15:00–翌 02:00 / 05:00–10:00</li>
+            <li><strong>免費拉麵宵夜：</strong>晚上 21:30</li>
+          </ul>
+        </div>
+        <div class="actions">
+          <a class="btn primary" href="https://www.google.com/maps/dir/?api=1&origin=近鉄奈良駅&destination=御宿野乃奈良&travelmode=walking" target="_blank" rel="noopener">走路導航</a>
+          <a class="btn" href="https://www.google.com/maps/search/?api=1&query=御宿野乃奈良" target="_blank" rel="noopener">飯店 Maps</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</details>
+
+<!-- ========================== DAY 2 ========================== -->
+<details class="day" id="day2">
+  <summary>Day 2 · 4/17 (五) — 奈良 ⇄ 吉野山奧千本 <span class="sub">賞櫻日</span></summary>
+  <div class="day-body">
+
+    <table class="overview-table">
+      <thead><tr><th>時間</th><th>行程</th><th>交通</th><th>費用</th></tr></thead>
+      <tbody>
+        <tr><td>07:30</td><td>飯店 → 近鐵奈良站</td><td>步行 3 分</td><td>—</td></tr>
+        <tr><td>08:00</td><td>近鐵奈良 → 大和西大寺 → 橿原神宮前 → 吉野</td><td>近鐵特急 (約 1h35)</td><td>1,700 円</td></tr>
+        <tr><td>09:40</td><td>吉野站 → 千本口 → 上千本</td><td>步行 3 分 + 吉野纜車 (3 分)</td><td>500 円</td></tr>
+        <tr><td>10:00</td><td>竹林院前 → 奧千本口</td><td>吉野山小巴 (15 分)</td><td>400 円</td></tr>
+        <tr><td>10:30</td><td>奧千本賞櫻</td><td>—</td><td>—</td></tr>
+        <tr><td>13:00</td><td>金峯神社、西行庵散策</td><td>—</td><td>—</td></tr>
+        <tr><td>15:30</td><td>下山：奧千本 → 吉野站</td><td>小巴 + 纜車</td><td>約 900 円</td></tr>
+        <tr><td>16:30</td><td>吉野 → 橿原 → 大和西大寺 → 奈良</td><td>近鐵特急</td><td>1,700 円</td></tr>
+        <tr><td>18:30</td><td>奈良町晚餐 / 飯店泡湯</td><td>—</td><td>—</td></tr>
+      </tbody>
+    </table>
+
+    <!-- 2-1 -->
+    <div class="segment">
+      <div class="seg-head">
+        <div class="seg-title">2-1 · 近鐵奈良 → 吉野 (2 次轉車)</div>
+        <div class="seg-meta">🚆 近鐵奈良線 → 橿原線 → 吉野線 ｜ <strong>約 1h35 · 1,700 円 (含特急券)</strong></div>
+      </div>
+      <div class="seg-body">
+        <ol class="steps">
+          <li>近鐵奈良站：找「急行 大阪難波行」或「區間急行」，月台看顯示板。</li>
+          <li>搭「急行 往大阪難波 / 尼崎」→ 第 2 站「<strong>大和西大寺</strong>」下車 (約 5 分)。</li>
+          <li>大和西大寺站同月台對面，或跟「橿原線 特急」指標換月台。</li>
+          <li>搭「近鉄橿原線 特急 往<strong>橿原神宮前</strong>」→ 終點下車 (約 35 分)。特急需加購特急券 520 円。</li>
+          <li>橿原神宮前站換到「近鉄吉野線」月台 (通常是同站內不同月台)。</li>
+          <li>搭「近鉄吉野線 特急 往吉野」→ 終點吉野下車 (約 50 分)。</li>
+          <li>吉野站是小小的地方站，出站後走右邊直接到千本口纜車站。</li>
+        </ol>
+        <div class="note-box">
+          <strong>💰 最划算買法</strong>
+          <ul>
+            <li>直接在近鐵奈良站買「近鐵特急券 全線自由席」2 段：各約 520 円 × 2</li>
+            <li>或購買「近鐵週遊 2 日券」(奈良・吉野方向 4,500 円) — 含所有近鐵車資</li>
+            <li>櫻花季常加開吉野方向的臨時特急班次，當日看時刻表</li>
+            <li>建議最早班 07:40 或 08:00 出發，避開賞櫻人潮高峰</li>
+          </ul>
+        </div>
+
+        <section class="station" id="saidaiji">
+          <div class="head">
+            <div class="station-name">大和西大寺駅 <span class="romaji">Yamato-Saidaiji Sta.</span></div>
+            <div class="lines">
+              <span class="line-tag line-kintetsu">近鐵奈良線 + 京都線 + 橿原線</span>
+            </div>
+          </div>
+          <div class="brief"><strong>重點：</strong>京都 ↔ 奈良 ↔ 橿原方向列車的交會點，同一月台上常同時停著不同方向的車。<strong>看月台電光告示和車內廣播</strong>，不要只看車門牌子。複雜到有 YouTuber 專門做解說影片。</div>
+          <div class="videos">
+            <a class="video" href="https://www.youtube.com/watch?v=EmjkFW8qK84" target="_blank" rel="noopener">
+              <div class="thumb"><img src="https://i.ytimg.com/vi/EmjkFW8qK84/mqdefault.jpg" alt=""></div>
+              <div class="meta">
+                <div class="title">【カオス駅】近鐵大和西大寺駅 徹底解說</div>
+                <div class="tag">YouTube · 鐵道宅完整拆解</div>
+              </div>
+            </a>
+            <a class="video" href="https://www.youtube.com/watch?v=y8YmZJHOVo0" target="_blank" rel="noopener">
+              <div class="thumb"><img src="https://i.ytimg.com/vi/y8YmZJHOVo0/mqdefault.jpg" alt=""></div>
+              <div class="meta">
+                <div class="title">大和西大寺駅 乗換案内 最新更新</div>
+                <div class="tag">YouTube · 新版指標</div>
+              </div>
+            </a>
+          </div>
+        </section>
+
+        <section class="station" id="kashihara">
+          <div class="head">
+            <div class="station-name">橿原神宮前駅 <span class="romaji">Kashiharajingu-mae Sta.</span></div>
+            <div class="lines">
+              <span class="line-tag line-kintetsu">近鐵南大阪/吉野/橿原線</span>
+            </div>
+          </div>
+          <div class="brief"><strong>重點：</strong>橿原線下車 → 走同一個站內到吉野線月台。不是同月台對面，要走樓梯下去再上來，跟著「吉野線」指標走。</div>
+          <div class="videos">
+            <a class="video" href="https://www.youtube.com/watch?v=SL3EWyzSrEk" target="_blank" rel="noopener">
+              <div class="thumb"><img src="https://i.ytimg.com/vi/SL3EWyzSrEk/mqdefault.jpg" alt=""></div>
+              <div class="meta">
+                <div class="title">橿原神宮前駅 近鉄橿原線 → 南大阪線 換車實拍</div>
+                <div class="tag">YouTube · 步驟完整</div>
+              </div>
+            </a>
+            <a class="video" href="https://www.youtube.com/watch?v=P89ZQiYWypA" target="_blank" rel="noopener">
+              <div class="thumb"><img src="https://i.ytimg.com/vi/P89ZQiYWypA/mqdefault.jpg" alt=""></div>
+              <div class="meta">
+                <div class="title">近鐵橿原神宮前駅 橿原線 → 吉野/南大阪線 乗換</div>
+                <div class="tag">YouTube · 另一個版本</div>
+              </div>
+            </a>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- 2-2 -->
+    <div class="segment">
+      <div class="seg-head">
+        <div class="seg-title">2-2 · 吉野站 → 千本口纜車 → 奧千本口</div>
+        <div class="seg-meta">🚠 吉野纜車 + 吉野山內小巴 ｜ <strong>約 25 分 · 500 + 400 = 900 円</strong></div>
+      </div>
+      <div class="seg-body">
+        <ol class="steps">
+          <li>從吉野站出站後右轉，走大馬路約 3 分鐘可到「<strong>千本口駅</strong>」吉野纜車下站。</li>
+          <li>吉野纜車是日本現役最古老的空中纜車 (1929 年開業)，單程 500 円，約 3 分鐘到山上「吉野山駅」。</li>
+          <li>出吉野山駅是下千本/中千本區。往右走經過「下千本」賞櫻區。</li>
+          <li>沿主步道走約 15 分鐘 → 到達「竹林院前」巴士站 (有便利商店可休息)。</li>
+          <li>竹林院前搭「吉野山奧千本口線」小巴往奧千本 (400 円，單程 15 分)。</li>
+          <li>櫻花季 (3/20–4/19) 班次很多，每 20–30 分鐘一班；平常班次少，務必確認時刻表。</li>
+          <li>終點「奧千本口」下車 → 徒步 10 分上山到金峯神社、西行庵 (海拔最高賞櫻區)。</li>
+        </ol>
+        <div class="note-box">
+          <strong>🌸 賞櫻策略</strong>
+          <ul>
+            <li>吉野山櫻花分 4 區：下千本 → 中千本 → 上千本 → 奧千本，由低到高開花</li>
+            <li>4/17 時間點：<strong>奧千本通常正盛開</strong>，下千本可能已開始凋謝</li>
+            <li>奧千本行走路線：奧千本口 → 金峯神社 → 西行庵 → 原路回 (約 1.5 小時)</li>
+            <li>山上氣溫比市區低 5 度以上，帶薄外套</li>
+            <li>山上餐廳少、等位時間長 — 建議早餐吃飽或帶便當上山</li>
+            <li>櫻花季回程纜車下午 3–4 點人潮爆多，建議 14:30 前開始下山</li>
+          </ul>
+        </div>
+
+        <section class="station" id="yoshino">
+          <div class="head">
+            <div class="station-name">吉野駅 + 吉野山ロープウェイ <span class="romaji">Yoshino Sta. / Ropeway</span></div>
+            <div class="lines">
+              <span class="line-tag line-kintetsu">近鐵吉野線</span>
+              <span class="line-tag line-ropeway">吉野大峯ケーブル</span>
+            </div>
+          </div>
+          <div class="brief"><strong>重點：</strong>近鐵吉野駅 → 走出站右轉 5 分鐘到千本口駅 → 搭吉野大峯ケーブル上到吉野山駅 → 走路/巴士上千本、中千本、奧千本。<strong>櫻花季索道常大排長龍</strong>，建議早上 8 點前抵達。</div>
+          <div class="videos">
+            <a class="video" href="https://www.youtube.com/watch?v=OOJC27JBCCo" target="_blank" rel="noopener">
+              <div class="thumb"><img src="https://i.ytimg.com/vi/OOJC27JBCCo/mqdefault.jpg" alt=""></div>
+              <div class="meta">
+                <div class="title">日本最古ロープウェイ 吉野大峯ケーブル 千本口駅 → 吉野山駅 實搭</div>
+                <div class="tag">YouTube · 完整搭乘</div>
+              </div>
+            </a>
+            <a class="video" href="https://www.youtube.com/watch?v=5zLyLXZdndk" target="_blank" rel="noopener">
+              <div class="thumb"><img src="https://i.ytimg.com/vi/5zLyLXZdndk/mqdefault.jpg" alt=""></div>
+              <div class="meta">
+                <div class="title">【2026 事前見どころ】吉野山千本桜 + 索道 + 巴士 → 奧千本 走法</div>
+                <div class="tag">YouTube · 2026 最新預習</div>
+              </div>
+            </a>
+          </div>
+          <div class="actions">
+            <a class="btn primary" href="https://www.google.com/maps/search/?api=1&query=近鉄吉野駅" target="_blank" rel="noopener">近鐵吉野駅 Maps</a>
+            <a class="btn" href="https://www.google.com/maps/search/?api=1&query=吉野山駅+ロープウェイ" target="_blank" rel="noopener">吉野山索道上站</a>
+          </div>
+        </section>
+      </div>
+    </div>
+
+  </div>
+</details>
+
+<!-- ========================== DAY 3 ========================== -->
+<details class="day" id="day3">
+  <summary>Day 3 · 4/18 (六) — 奈良 → 京都 <span class="sub">東大寺・春日大社</span></summary>
+  <div class="day-body">
+
+    <table class="overview-table">
+      <thead><tr><th>時間</th><th>行程</th><th>交通</th><th>費用</th></tr></thead>
+      <tbody>
+        <tr><td>09:00</td><td>飯店 → JR 奈良站 (寄行李)</td><td>步行 15 分 或巴士</td><td>—</td></tr>
+        <tr><td>09:30</td><td>JR 奈良 → 東大寺・春日大社前</td><td>奈良循環巴士 (10 分)</td><td>220 円</td></tr>
+        <tr><td>09:45</td><td>東大寺參拜、看大佛</td><td>—</td><td>門票 600 円</td></tr>
+        <tr><td>11:30</td><td>走參道到春日大社</td><td>步行 15–20 分</td><td>—</td></tr>
+        <tr><td>12:30</td><td>奈良町午餐</td><td>—</td><td>—</td></tr>
+        <tr><td>14:30</td><td>取行李 → JR 奈良站</td><td>—</td><td>—</td></tr>
+        <tr><td>15:00</td><td>JR 奈良 → 京都</td><td>JR 奈良線 みやこ路快速 (45 分)</td><td>760 円</td></tr>
+        <tr><td>16:00</td><td>Check-in 京都站前大和 ROYNET</td><td>步行 5 分</td><td>—</td></tr>
+        <tr><td>晚間</td><td>京都站周邊晚餐</td><td>—</td><td>—</td></tr>
+      </tbody>
+    </table>
+
+    <!-- 3-1 -->
+    <div class="segment">
+      <div class="seg-head">
+        <div class="seg-title">3-1 · 奈良市內移動 (循環巴士 + 步行)</div>
+        <div class="seg-meta">🚌 奈良交通巴士 Loop Line 1 / 2 ｜ <strong>10 分 · 220 円</strong></div>
+      </div>
+      <div class="seg-body">
+        <ol class="steps">
+          <li>先到 JR 奈良站或近鐵奈良站寄放行李 (投幣置物櫃 500–700 円)。</li>
+          <li>從 JR 奈良站東口或近鐵奈良站 2 號出口，到「奈良市循環巴士站」。</li>
+          <li>搭「循環巴士 Loop 1」或「Loop 2」→ 「<strong>東大寺大佛殿・春日大社前</strong>」下車 (10 分)。</li>
+          <li>下車後跟「東大寺」指標步行 5 分即到南大門。</li>
+          <li>東大寺遊覽時間建議 60–90 分鐘。</li>
+          <li>東大寺 → 春日大社：走南大門外的參道，約 15–20 分 (路上有鹿、有小商店)。</li>
+          <li>春日大社參拜完，回到巴士站搭 Loop Line 回 JR 奈良站 (10 分)。</li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- 3-2 -->
+    <div class="segment">
+      <div class="seg-head">
+        <div class="seg-title">3-2 · JR 奈良 → 京都 (みやこ路快速)</div>
+        <div class="seg-meta">🚆 JR 奈良線 みやこ路快速 ｜ <strong>約 45 分 · 760 円</strong></div>
+      </div>
+      <div class="seg-body">
+        <ol class="steps">
+          <li>前往「JR 奈良站」(<strong>注意不是近鐵奈良站！兩站相距約 1 公里</strong>)。</li>
+          <li>JR 奈良站剪票口購票：760 円到京都，或用 ICOCA 直接感應進站。</li>
+          <li>月台通常是 2 番線或 3 番線 — 看電子板「<strong>みやこ路快速 京都行</strong>」。</li>
+          <li>每 30 分鐘 1 班；普通電車約 70 分 — 一定要搭「みやこ路快速」。</li>
+          <li>中途停靠：木津 → 宇治 → 六地蔵 → 東福寺 → 京都 (終點)。</li>
+          <li>約 45 分後抵達「京都站」— 下車後走中央改札出口。</li>
+          <li>京都站 → 大和 ROYNET 飯店：從<strong>八條口 (南側)</strong>出站，步行約 5 分。</li>
+        </ol>
+        <div class="note-box">
+          <strong>⚠ 重要提醒</strong>
+          <ul>
+            <li><strong>KANSAI THRU PASS 不能搭 JR！</strong>需另買票或用 ICOCA</li>
+            <li>JR 奈良站與近鐵奈良站不同，別走錯</li>
+            <li>京都站是巨大複合車站，下車後先看指標找「八條口」或「中央口」</li>
+            <li>京都站前大和 ROYNET Premier 實際位置在南側八條口步行 3–5 分</li>
+          </ul>
+        </div>
+
+        <section class="station" id="nara">
+          <div class="head">
+            <div class="station-name">JR奈良駅 ↔ 近鐵奈良駅 <span class="romaji">JR Nara ↔ Kintetsu Nara</span></div>
+            <div class="lines">
+              <span class="line-tag line-jr">JR 奈良</span>
+              <span class="line-tag line-kintetsu">近鐵奈良</span>
+            </div>
+          </div>
+          <div class="brief"><strong>重點：</strong>兩站相距約 <strong>1.1 公里，走路 13–15 分鐘</strong>，中間就是三条通商店街。近鐵奈良站距離公園比較近 (走 5 分鐘)；JR 奈良要多走 15–20 分鐘。</div>
+          <div class="videos">
+            <a class="video" href="https://www.youtube.com/watch?v=FUWkxuu2MUA" target="_blank" rel="noopener">
+              <div class="thumb"><img src="https://i.ytimg.com/vi/FUWkxuu2MUA/mqdefault.jpg" alt=""></div>
+              <div class="meta">
+                <div class="title">JR奈良駅 → 近鐵奈良駅 全程走路實拍</div>
+                <div class="tag">YouTube · 中日雙語</div>
+              </div>
+            </a>
+            <a class="video" href="https://www.youtube.com/watch?v=ch9Gr_VVZvU" target="_blank" rel="noopener">
+              <div class="thumb"><img src="https://i.ytimg.com/vi/ch9Gr_VVZvU/mqdefault.jpg" alt=""></div>
+              <div class="meta">
+                <div class="title">JR奈良駅 → 近鐵奈良駅 三条通全程</div>
+                <div class="tag">YouTube · 另一視角</div>
+              </div>
+            </a>
+          </div>
+          <div class="actions">
+            <a class="btn primary" href="https://www.google.com/maps/search/?api=1&query=近鉄奈良駅" target="_blank" rel="noopener">近鐵奈良 Maps</a>
+            <a class="btn" href="https://www.google.com/maps/dir/?api=1&origin=JR奈良駅&destination=近鉄奈良駅&travelmode=walking" target="_blank" rel="noopener">JR→近鐵 走路導航</a>
+          </div>
+        </section>
+      </div>
+    </div>
+
+  </div>
+</details>
+
+<!-- ========================== DAY 4 ========================== -->
+<details class="day" id="day4">
+  <summary>Day 4 · 4/19 (日) — 京都 → 宇治 → 神戶三宮 <span class="sub">平等院・抹茶</span></summary>
+  <div class="day-body">
+
+    <table class="overview-table">
+      <thead><tr><th>時間</th><th>行程</th><th>交通</th><th>費用</th></tr></thead>
+      <tbody>
+        <tr><td>09:30</td><td>飯店寄行李 → 京都站</td><td>步行 5 分</td><td>—</td></tr>
+        <tr><td>09:40</td><td>京都 → 宇治</td><td>JR 奈良線 みやこ路快速 (20 分)</td><td>240 円</td></tr>
+        <tr><td>10:00</td><td>中村藤吉本店 抹茶早茶</td><td>步行 1 分</td><td>—</td></tr>
+        <tr><td>11:00</td><td>平等院 鳳凰堂</td><td>步行 10 分</td><td>門票 600 円</td></tr>
+        <tr><td>13:00</td><td>宇治上神社</td><td>步行 10 分 過朝霧橋</td><td>—</td></tr>
+        <tr><td>14:00</td><td>回 JR 宇治站 → 京都</td><td>JR 奈良線 (20 分)</td><td>240 円</td></tr>
+        <tr><td>14:30</td><td>取行李，出發神戶</td><td>—</td><td>—</td></tr>
+        <tr><td>15:00</td><td>京都 → 神戶三宮</td><td>JR 京都線 新快速 (50 分)</td><td>1,110 円</td></tr>
+        <tr><td>16:00</td><td>Check-in 神戶三宮大和 Roynet</td><td>步行 5 分</td><td>—</td></tr>
+        <tr><td>晚間</td><td>三宮晚餐 / 南京町</td><td>—</td><td>—</td></tr>
+      </tbody>
+    </table>
+
+    <!-- 4-1 -->
+    <div class="segment">
+      <div class="seg-head">
+        <div class="seg-title">4-1 · 京都 → 宇治 (JR 奈良線)</div>
+        <div class="seg-meta">🚆 JR 奈良線 みやこ路快速 ｜ <strong>20 分 · 240 円</strong></div>
+      </div>
+      <div class="seg-body">
+        <ol class="steps">
+          <li>京都站內找「<strong>JR 奈良線</strong>」月台 (通常 8–10 番線)。</li>
+          <li>搭「みやこ路快速 奈良行」或「普通 宇治行」。快速班次中停站少，20 分可達。</li>
+          <li>沿途風景：過木津川後會看到宇治川，準備下車。</li>
+          <li>JR 宇治站下車後出正面出口，前面是大馬路。</li>
+          <li>「中村藤吉本店」在車站斜對面 (步行約 1 分) — 門口有百年木造建築招牌。</li>
+        </ol>
+
+        <section class="station" id="kyoto">
+          <div class="head">
+            <div class="station-name">JR京都駅 奈良線月台 <span class="romaji">Kyoto Sta. → Nara Line</span></div>
+            <div class="lines">
+              <span class="line-tag line-jr">JR 奈良線 8-10 月台</span>
+            </div>
+          </div>
+          <div class="brief"><strong>重點：</strong>京都車站超大，奈良線月台 <strong>8~10 番のりば</strong>在新幹線中央閘口旁邊。從中央閘口過去要走過一條長的南北向連絡通道。先找「奈良線」綠色指標別走錯。</div>
+          <div class="videos">
+            <a class="video" href="https://www.youtube.com/watch?v=lY3PDut3G4E" target="_blank" rel="noopener">
+              <div class="thumb"><img src="https://i.ytimg.com/vi/lY3PDut3G4E/mqdefault.jpg" alt=""></div>
+              <div class="meta">
+                <div class="title">JR京都駅 中央口改札 → 奈良線 8~10月台 走法</div>
+                <div class="tag">YouTube · 最常走的路線</div>
+              </div>
+            </a>
+            <a class="video" href="https://www.youtube.com/watch?v=yIlRJl-mfZk" target="_blank" rel="noopener">
+              <div class="thumb"><img src="https://i.ytimg.com/vi/yIlRJl-mfZk/mqdefault.jpg" alt=""></div>
+              <div class="meta">
+                <div class="title">新幹線月台 → JR奈良線 宇治/奈良方向 換車路線</div>
+                <div class="tag">YouTube · 新幹線下車者必看</div>
+              </div>
+            </a>
+          </div>
+          <div class="actions">
+            <a class="btn primary" href="https://www.google.com/maps/search/?api=1&query=京都駅" target="_blank" rel="noopener">京都駅 Maps</a>
+          </div>
+        </section>
+
+        <section class="station" id="uji">
+          <div class="head">
+            <div class="station-name">JR宇治駅 <span class="romaji">JR Uji Sta.</span></div>
+            <div class="lines">
+              <span class="line-tag line-jr">JR 奈良線</span>
+            </div>
+          </div>
+          <div class="brief"><strong>重點：</strong>從京都搭 JR 奈良線快速列車 17–20 分鐘到宇治。下車後走到平等院約 10 分鐘——走出站往右，過宇治橋往西南看就是參道。</div>
+          <div class="videos">
+            <a class="video" href="https://www.youtube.com/watch?v=1xqP0m4oEf8" target="_blank" rel="noopener">
+              <div class="thumb"><img src="https://i.ytimg.com/vi/1xqP0m4oEf8/mqdefault.jpg" alt=""></div>
+              <div class="meta">
+                <div class="title">JR宇治駅 → 平等院 世界遺產路線</div>
+                <div class="tag">YouTube · 走路實拍</div>
+              </div>
+            </a>
+            <a class="video" href="https://www.youtube.com/watch?v=qLwEqfDAsTw" target="_blank" rel="noopener">
+              <div class="thumb"><img src="https://i.ytimg.com/vi/qLwEqfDAsTw/mqdefault.jpg" alt=""></div>
+              <div class="meta">
+                <div class="title">【4K】宇治散策 JR宇治駅 → 宇治橋通 → 宇治川</div>
+                <div class="tag">YouTube · 高畫質</div>
+              </div>
+            </a>
+            <a class="video" href="https://www.youtube.com/watch?v=5qynOyCFiZU" target="_blank" rel="noopener">
+              <div class="thumb"><img src="https://i.ytimg.com/vi/5qynOyCFiZU/mqdefault.jpg" alt=""></div>
+              <div class="meta">
+                <div class="title">宇治春季散步 京阪宇治 → 平等院 → 宇治上神社 → JR宇治</div>
+                <div class="tag">YouTube · 整個宇治動線</div>
+              </div>
+            </a>
+          </div>
+          <div class="actions">
+            <a class="btn primary" href="https://www.google.com/maps/search/?api=1&query=JR宇治駅" target="_blank" rel="noopener">JR 宇治駅 Maps</a>
+            <a class="btn" href="https://www.google.com/maps/search/?api=1&query=平等院" target="_blank" rel="noopener">平等院 Maps</a>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- 4-2 -->
+    <div class="segment">
+      <div class="seg-head">
+        <div class="seg-title">4-2 · 宇治散策：中村藤吉 → 平等院 → 宇治上神社</div>
+        <div class="seg-meta">🚶 全程步行 ｜ <strong>約 1.5 公里 · 約 2 小時 (含參拜)</strong></div>
+      </div>
+      <div class="seg-body">
+        <ol class="steps">
+          <li><strong>中村藤吉本店</strong>：建議 10:00 開店前 5 分鐘到達抽號碼牌。抹茶刨冰、抹茶果凍是名物。</li>
+          <li>用餐後走出中村藤吉 → 右轉直走 → 過宇治橋 → 繼續直走到「平等院表參道」商店街。</li>
+          <li><strong>平等院表參道</strong>：全是茶葉店步道，可順便試茶、買伴手禮。</li>
+          <li>走到底就是「平等院」正門，門票 600 円 (鳳凰堂內部另加 300 円)。</li>
+          <li>平等院遊覽 1 小時後，從後門 (北口) 出來，往宇治川「朝霧橋」方向走。</li>
+          <li>過朝霧橋後繼續直走上坡約 5 分，即到「<strong>宇治上神社</strong>」— 日本現存最古老的神社建築。</li>
+          <li>參拜後原路返回：下山→過朝霧橋→沿宇治川回 JR 宇治站 (約 15 分)。</li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- 4-3 -->
+    <div class="segment">
+      <div class="seg-head">
+        <div class="seg-title">4-3 · 京都 → 神戶三宮 (JR 新快速)</div>
+        <div class="seg-meta">🚆 JR 京都線 新快速 ｜ <strong>約 50 分 · 1,110 円</strong></div>
+      </div>
+      <div class="seg-body">
+        <ol class="steps">
+          <li>宇治散策後回京都站取行李。</li>
+          <li>京都站「JR 京都線 / 神戶線」月台 (通常 4–7 番線)。</li>
+          <li>搭「<strong>新快速 姫路行</strong>」或「新快速 播州赤穂行」→ 約 50 分到「三ノ宮」下車。</li>
+          <li>注意：<strong>新快速</strong>不要搭成普通或急行 (慢很多)。</li>
+          <li>沿途停靠：京都 → 大阪 → 新大阪 → 尼崎 → 三ノ宮。</li>
+          <li>三ノ宮站下車後，走「中央口」或「東口」出站 → 大和 Roynet Premier 在東口步行 5 分。</li>
+        </ol>
+        <div class="note-box">
+          <strong>💡 票券小提醒</strong>
+          <ul>
+            <li>這段完全走 JR — 用 ICOCA 最方便 (不能用 KTP)</li>
+            <li>JR 三ノ宮站和阪急神戶三宮、阪神神戶三宮都在附近，用地下街連通但出口完全不同</li>
+            <li>大和 Roynet Premier 三宮地址：〒651-0087 神戶市中央区御幸通 8-1-6 (三宮站東口步行 3–5 分)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</details>
+
+<!-- ========================== DAY 5 ========================== -->
+<details class="day" id="day5">
+  <summary>Day 5 · 4/20 (一) — 神戶三宮一日遊 <span class="sub">摩耶山・夜景</span></summary>
+  <div class="day-body">
+
+    <table class="overview-table">
+      <thead><tr><th>時間</th><th>行程</th><th>交通</th><th>費用</th></tr></thead>
+      <tbody>
+        <tr><td>08:00</td><td>Kobe Beef Yakiniku Okatora 三宮店</td><td>飯店步行 5–8 分</td><td>—</td></tr>
+        <tr><td>09:30</td><td>回飯店休息</td><td>—</td><td>—</td></tr>
+        <tr><td>10:30</td><td>三宮 → 摩耶ケーブル下</td><td>神戶市巴士 18 號 (25–28 分)</td><td>230 円</td></tr>
+        <tr><td>11:00</td><td>摩耶 Cable 下 → 虹之駅</td><td>摩耶 Cable (5 分)</td><td>Viewline</td></tr>
+        <tr><td>11:05</td><td>虹之駅 → 星之駅</td><td>摩耶 Ropeway (5 分)</td><td>1,560 円來回</td></tr>
+        <tr><td>11:10</td><td>掬星台 (日本三大夜景)</td><td>步行 2 分</td><td>—</td></tr>
+        <tr><td>12:00</td><td>山上餐廳午餐 / 咖啡</td><td>—</td><td>—</td></tr>
+        <tr><td>14:00</td><td>下山：星之駅 → 摩耶ケーブル下</td><td>Ropeway + Cable</td><td>—</td></tr>
+        <tr><td>15:00</td><td>回三宮</td><td>巴士 18 號 或計程車</td><td>230 円</td></tr>
+        <tr><td>晚間</td><td>三宮逛街、晚餐</td><td>—</td><td>—</td></tr>
+      </tbody>
+    </table>
+
+    <!-- 5-1 -->
+    <div class="segment">
+      <div class="seg-head">
+        <div class="seg-title">5-1 · 早餐 · Kobe Beef Yakiniku Okatora</div>
+        <div class="seg-meta">🚶 飯店步行 5–8 分 ｜ ⚠ 先確認營業時間</div>
+      </div>
+      <div class="seg-body">
+        <div class="note-box">
+          <strong>⚠ 請先確認營業時間</strong> — Kobe Beef Yakiniku Okatora 三宮店 (神戶牛焼肉 岡虎)
+          <ul>
+            <li>一般午餐：11:30–15:00；晚餐：17:00–23:00</li>
+            <li><strong>若想 08:00 吃燒肉，該店幾乎確定未開</strong></li>
+            <li>建議：<br>a) 預約午餐 11:30 即入店，調整當天行程順序<br>b) 改選其他早餐 (飯店吃，或至三宮地下街 Piazza 神戶)</li>
+            <li>預約方式：TableCheck、食べログ、或請飯店 Concierge 協助</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5-2 -->
+    <div class="segment">
+      <div class="seg-head">
+        <div class="seg-title">5-2 · 三宮 → 摩耶山掬星台</div>
+        <div class="seg-meta">🚌🚠 神戶市巴士 18 + 摩耶 Cable + Ropeway ｜ <strong>約 50 分 · 230 + 1,560 円</strong></div>
+      </div>
+      <div class="seg-body">
+        <ol class="steps">
+          <li>三宮站前的「三宮バスターミナル (巴士總站)」找「<strong>D2 乘車處</strong>」。</li>
+          <li>搭「神戶市巴士 18 號 往摩耶ケーブル下行」→ 終點下車 (約 25–28 分，230 円)。</li>
+          <li>下巴士後跟「摩耶ケーブル」指標走約 2 分 → 到摩耶 Cable 下站。</li>
+          <li>購票：「<strong>Viewline 來回券 (Cable + Ropeway 來回) 1,560 円</strong>」最划算。</li>
+          <li>搭摩耶 Cable 到「虹之駅」— 約 5 分，沿途上升坡度很大。</li>
+          <li>虹之駅下纜車 → 同站轉搭「摩耶 Ropeway」往「星之駅」(5 分)。</li>
+          <li>星之駅下車後步行 2 分即到「<strong>掬星台</strong>」觀景台 — 日本三大夜景之一。</li>
+          <li>回程：原路返回 (Ropeway → Cable → 巴士 18 → 三宮)。務必注意末班時刻。</li>
+        </ol>
+        <div class="note-box">
+          <strong>⚠ 時刻 / 注意重點</strong>
+          <ul>
+            <li>營業時間：10:00–17:30 (上行末班 17:10)；夜景延長日另查</li>
+            <li>公休：週二 (<strong>4/20 週一正常營運 ✅</strong>)</li>
+            <li>KANSAI THRU PASS 涵蓋 市巴士 + Cable + Ropeway — 若有 KTP 這天免費</li>
+            <li>山上氣溫比市區低 5–8 度，帶薄外套</li>
+            <li>若想看夜景但票券限時，當天要確認 Ropeway 夜間延長時段</li>
+            <li>回程巴士 18 號末班通常 18:00 前，請留意</li>
+          </ul>
+        </div>
+
+        <section class="station" id="maya">
+          <div class="head">
+            <div class="station-name">摩耶ケーブル・摩耶ロープウェー <span class="romaji">Maya Cable / Ropeway</span></div>
+            <div class="lines">
+              <span class="line-tag line-cable">纜車</span>
+              <span class="line-tag line-ropeway">索道</span>
+            </div>
+          </div>
+          <div class="brief"><strong>重點：</strong>三宮駅北口搭市巴士 <strong>18 號</strong>到「摩耶ケーブル下」(約 25 分) → 轉摩耶纜車上到虹之駅 → 轉摩耶 Ropeway 上到星之駅 (掬星台)。整套三段叫「まやビューライン」，買一日券最划算。</div>
+          <div class="videos">
+            <a class="video" href="https://www.youtube.com/watch?v=QuhZeseNrHE" target="_blank" rel="noopener">
+              <div class="thumb"><img src="https://i.ytimg.com/vi/QuhZeseNrHE/mqdefault.jpg" alt=""></div>
+              <div class="meta">
+                <div class="title">2025年 まやビューライン 摩耶ケーブル 全程實拍</div>
+                <div class="tag">YouTube · 最新版</div>
+              </div>
+            </a>
+            <a class="video" href="https://www.youtube.com/watch?v=Awk7zWKsJXM" target="_blank" rel="noopener">
+              <div class="thumb"><img src="https://i.ytimg.com/vi/Awk7zWKsJXM/mqdefault.jpg" alt=""></div>
+              <div class="meta">
+                <div class="title">掬星台の絶景 摩耶纜車 + 索道 空中散歩</div>
+                <div class="tag">YouTube · 景點預覽</div>
+              </div>
+            </a>
+          </div>
+          <div class="actions">
+            <a class="btn primary" href="https://www.google.com/maps/search/?api=1&query=摩耶ケーブル下" target="_blank" rel="noopener">摩耶ケーブル下 Maps</a>
+            <a class="btn" href="https://www.google.com/maps/search/?api=1&query=掬星台" target="_blank" rel="noopener">掬星台 Maps</a>
+          </div>
+        </section>
+      </div>
+    </div>
+
+  </div>
+</details>
+
+<!-- ========================== DAY 6 ========================== -->
+<details class="day" id="day6">
+  <summary>Day 6 · 4/21 (二) — 神戶動物王國 → 神戶機場 <span class="sub">返程日</span></summary>
+  <div class="day-body">
+
+    <table class="overview-table">
+      <thead><tr><th>時間</th><th>行程</th><th>交通</th><th>費用</th></tr></thead>
+      <tbody>
+        <tr><td>09:00</td><td>飯店 Check-out → 三宮站</td><td>步行 5 分</td><td>—</td></tr>
+        <tr><td>09:15</td><td>三宮 → 神戶機場 (先寄行李)</td><td>Port Liner (18 分)</td><td>340 円</td></tr>
+        <tr><td>09:45</td><td>機場寄放行李</td><td>—</td><td>置物櫃 700 円</td></tr>
+        <tr><td>10:00</td><td>神戶機場 → 計算科學中心</td><td>Port Liner 往三宮方向 (2 分)</td><td>250 円</td></tr>
+        <tr><td>10:05</td><td>神戶動物王國開園</td><td>步行 1 分</td><td>2,200 円</td></tr>
+        <tr><td>13:30</td><td>午餐 (園內或便當)</td><td>—</td><td>—</td></tr>
+        <tr><td>14:30</td><td>動物王國 → 神戶機場</td><td>Port Liner 往機場方向 (2 分)</td><td>250 円</td></tr>
+        <tr><td>15:00</td><td>機場 Check-in / 離境</td><td>—</td><td>—</td></tr>
+      </tbody>
+    </table>
+
+    <!-- 6-1 -->
+    <div class="segment">
+      <div class="seg-head">
+        <div class="seg-title">6-1 · 三宮 → 動物王國 → 神戶機場 (Port Liner 全程)</div>
+        <div class="seg-meta">🚇 神戶新交通 Port Liner ｜ <strong>總時間約 30 分 (含寄行李) · 約 840 円</strong></div>
+      </div>
+      <div class="seg-body">
+        <ol class="steps">
+          <li>三宮站：找 Port Liner 月台 (JR 三宮站東側，搭電扶梯上樓)。</li>
+          <li><strong>策略 A (推薦)</strong>：先搭 Port Liner 到終點「神戶機場」→ 寄行李 → 再搭回程到「計算科學中心前」去動物王國。</li>
+          <li>策略 B：直接下車「計算科學中心前 (京コンピュータ前)」→ 提行李去動物王國 (園內置物櫃空間有限)。</li>
+          <li>Port Liner 三宮 → 神戶機場 單程 340 円 (18 分)。</li>
+          <li>「<strong>計算科學中心前 (京コンピュータ前)</strong>」站又名「神戶動物王國前」，下車步行 1 分到動物王國。</li>
+          <li>注意：Port Liner 有 2 種路線 — 「直達機場」和「經市民廣場」，都會到神戶機場終點。</li>
+          <li>回程：動物王國出來後在「計算科學中心前」站搭 Port Liner 往神戶機場方向 (2 分即達)。</li>
+        </ol>
+        <div class="note-box">
+          <strong>🎫 最划算票券</strong>
+          <ul>
+            <li>「神戶動物王國 + Port Liner 套票」— 於三宮站 Port Liner 售票處買。含：Port Liner 三宮⇄計算科學中心 來回 + 動物王國門票，省約 560 円</li>
+            <li>若當天也要回機場：套票的回程段 + 加購計算科學→機場 (250 円)</li>
+            <li>KANSAI THRU PASS 涵蓋 Port Liner — 若 KTP 還有剩餘日可使用</li>
+            <li>動物王國營業：10:00–17:00；週四公休 (<strong>4/21 週二正常 ✅</strong>)</li>
+          </ul>
+        </div>
+        <div class="note-box">
+          <strong>🛫 神戶機場離境提醒</strong>
+          <ul>
+            <li>神戶機場是國內機場規模，Check-in 相對快</li>
+            <li>國際航班：神戶機場主要是國內線，若國際轉機請查清楚</li>
+            <li>建議起飛前 <strong>90 分鐘</strong>到機場</li>
+            <li>Port Liner 神戶機場站直接連結航廈 2F</li>
+            <li>出境前可在機場 1F 商店買伴手禮 (明石燒、神戶布丁)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</details>
+
+<!-- ========================== 附錄 ========================== -->
+<details class="section" id="appendix">
+  <summary>📎 附錄：景點時間・緊急聯絡・日文短句</summary>
+  <div class="sec-body">
+
+    <h3 class="sub-h">A. 景點營業時間 & 門票</h3>
+    <table class="appendix-table">
+      <thead><tr><th>景點</th><th>時間</th><th>門票</th></tr></thead>
+      <tbody>
+        <tr><td>東大寺 大佛殿</td><td>07:30–17:30 (4–10 月)</td><td>600 円</td></tr>
+        <tr><td>春日大社 本殿</td><td>06:30–17:30</td><td>免費 (特別參拜 500 円)</td></tr>
+        <tr><td>吉野纜車</td><td>09:20–17:00</td><td>單程 500 / 來回 800</td></tr>
+        <tr><td>金峯山寺</td><td>08:30–16:30</td><td>800 円</td></tr>
+        <tr><td>平等院</td><td>08:30–17:30</td><td>600 円 (鳳凰堂 +300)</td></tr>
+        <tr><td>宇治上神社</td><td>09:00–16:30</td><td>免費</td></tr>
+        <tr><td>中村藤吉本店</td><td>10:00–17:30</td><td>建議早到抽號碼牌</td></tr>
+        <tr><td>摩耶 Cable + Ropeway</td><td>10:00–17:30</td><td>Viewline 1,560 円 (週二休)</td></tr>
+        <tr><td>掬星台展望台</td><td>24 小時</td><td>免費</td></tr>
+        <tr><td>神戶動物王國</td><td>10:00–17:00</td><td>2,200 円 (週四休)</td></tr>
+        <tr><td>神戶牛 岡虎 三宮店</td><td>11:30–15:00 / 17:00–23:00</td><td>需預約</td></tr>
+      </tbody>
+    </table>
+
+    <h3 class="sub-h">B. 緊急聯絡</h3>
+    <table class="appendix-table">
+      <tbody>
+        <tr><td>🚓 警察</td><td><a href="tel:110">110</a></td><td>全國通用</td></tr>
+        <tr><td>🚑 救護/消防</td><td><a href="tel:119">119</a></td><td>全國通用</td></tr>
+        <tr><td>🌐 日本旅遊熱線 (JNTO)</td><td><a href="tel:+81503816278">050-3816-2787</a></td><td>24h，中英日韓</td></tr>
+        <tr><td>📞 台北駐大阪辦事處</td><td><a href="tel:+81664438481">+81-6-6443-8481</a></td><td>緊急狀況可聯絡</td></tr>
+        <tr><td>🏥 奈良縣立醫科大學附屬醫院</td><td><a href="tel:+81744223051">+81-744-22-3051</a></td><td>奈良地區急診</td></tr>
+        <tr><td>🏥 京都大學醫學部附屬醫院</td><td><a href="tel:+81757513111">+81-75-751-3111</a></td><td>京都地區</td></tr>
+        <tr><td>🏥 神戶市立醫療中心中央市民醫院</td><td><a href="tel:+81783024321">+81-78-302-4321</a></td><td>神戶地區</td></tr>
+        <tr><td>🗼 觀光案內所 (奈良)</td><td>近鐵奈良站內</td><td>09:00–21:00</td></tr>
+        <tr><td>🗼 觀光案內所 (京都)</td><td>JR 京都站 2F</td><td>08:30–19:00</td></tr>
+        <tr><td>🗼 觀光案內所 (神戶)</td><td>三宮東口 / 神戶機場</td><td>09:00–19:00</td></tr>
+        <tr><td>📶 遺失物 (近鐵)</td><td><a href="tel:+81667753681">+81-6-6775-3681</a></td><td>大阪上本町總社</td></tr>
+        <tr><td>📶 遺失物 (JR 西日本)</td><td><a href="tel:+81570004146">0570-00-4146</a></td><td>—</td></tr>
+      </tbody>
+    </table>
+
+    <h3 class="sub-h">C. 常用日文短句 — 問路</h3>
+    <table class="appendix-table">
+      <tbody>
+        <tr><td>請問○○在哪裡？</td><td class="ja">すみません、○○はどこですか？</td><td class="ro">Sumimasen, ○○ wa doko desu ka?</td></tr>
+        <tr><td>我迷路了</td><td class="ja">道に迷いました</td><td class="ro">Michi ni mayoimashita</td></tr>
+        <tr><td>這是往○○的車嗎？</td><td class="ja">これは○○行きですか？</td><td class="ro">Kore wa ○○ yuki desu ka?</td></tr>
+        <tr><td>下一班○○幾點？</td><td class="ja">次の○○は何時ですか？</td><td class="ro">Tsugi no ○○ wa nanji desu ka?</td></tr>
+        <tr><td>月台在哪裡？</td><td class="ja">ホームはどこですか？</td><td class="ro">Hōmu wa doko desu ka?</td></tr>
+        <tr><td>出口在哪裡？</td><td class="ja">出口はどこですか？</td><td class="ro">Deguchi wa doko desu ka?</td></tr>
+      </tbody>
+    </table>
+
+    <h3 class="sub-h">C. 常用日文短句 — 買票</h3>
+    <table class="appendix-table">
+      <tbody>
+        <tr><td>我要一張到○○的票</td><td class="ja">○○まで一枚ください</td><td class="ro">○○ made ichimai kudasai</td></tr>
+        <tr><td>有 KANSAI THRU PASS 嗎？</td><td class="ja">KANSAI THRU PASS はありますか？</td><td class="ro">wa arimasu ka?</td></tr>
+        <tr><td>多少錢？</td><td class="ja">いくらですか？</td><td class="ro">Ikura desu ka?</td></tr>
+        <tr><td>可以用 IC 卡嗎？</td><td class="ja">IC カードは使えますか？</td><td class="ro">IC kādo wa tsukaemasu ka?</td></tr>
+        <tr><td>我要特急券</td><td class="ja">特急券をください</td><td class="ro">Tokkyūken o kudasai</td></tr>
+        <tr><td>來回票</td><td class="ja">往復券</td><td class="ro">Ōfukuken</td></tr>
+      </tbody>
+    </table>
+
+    <h3 class="sub-h">C. 常用日文短句 — 求救</h3>
+    <table class="appendix-table">
+      <tbody>
+        <tr><td>請幫幫我！</td><td class="ja">助けてください！</td><td class="ro">Tasukete kudasai!</td></tr>
+        <tr><td>我生病了</td><td class="ja">病気です</td><td class="ro">Byōki desu</td></tr>
+        <tr><td>請叫救護車</td><td class="ja">救急車を呼んでください</td><td class="ro">Kyūkyūsha o yonde kudasai</td></tr>
+        <tr><td>我護照掉了</td><td class="ja">パスポートをなくしました</td><td class="ro">Pasupōto o nakushimashita</td></tr>
+        <tr><td>請叫警察</td><td class="ja">警察を呼んでください</td><td class="ro">Keisatsu o yonde kudasai</td></tr>
+        <tr><td>最近的醫院在哪裡？</td><td class="ja">一番近い病院はどこですか？</td><td class="ro">Ichiban chikai byōin wa doko desu ka?</td></tr>
+        <tr><td>我會說一點日文/英文</td><td class="ja">少し日本語/英語が話せます</td><td class="ro">Sukoshi nihongo/eigo ga hanasemasu</td></tr>
+      </tbody>
+    </table>
+
+    <h3 class="sub-h">C. 常用日文短句 — 飯店 / 餐廳</h3>
+    <table class="appendix-table">
+      <tbody>
+        <tr><td>我有預約</td><td class="ja">予約があります</td><td class="ro">Yoyaku ga arimasu</td></tr>
+        <tr><td>請給我菜單</td><td class="ja">メニューをください</td><td class="ro">Menyū o kudasai</td></tr>
+        <tr><td>請推薦</td><td class="ja">おすすめは何ですか？</td><td class="ro">Osusume wa nan desu ka?</td></tr>
+        <tr><td>結帳</td><td class="ja">お会計お願いします</td><td class="ro">Okaikei onegaishimasu</td></tr>
+        <tr><td>Check-in</td><td class="ja">チェックインお願いします</td><td class="ro">Chekku-in onegaishimasu</td></tr>
+        <tr><td>Check-out</td><td class="ja">チェックアウトお願いします</td><td class="ro">Chekku-auto onegaishimasu</td></tr>
+        <tr><td>寄放行李可以嗎？</td><td class="ja">荷物を預かってもらえますか？</td><td class="ro">Nimotsu o azukatte moraemasu ka?</td></tr>
+      </tbody>
+    </table>
+
+  </div>
+</details>
+
+<!-- ========================== 備用 ========================== -->
+<details class="section" id="bonus">
+  <summary>🗂 備用參考 — 關西機場・難波・阿部野橋</summary>
+  <div class="sec-body">
+    <p style="margin:0 0 12px; font-size:12.5px; color:var(--muted);">
+      以下車站不在本次主要行程中，但如果計劃臨時調整 (例如改從關西機場 KIX 出入境、或從大阪阿部野橋走替代路線到吉野) 可當參考。
+    </p>
+
+    <section class="station">
+      <div class="head">
+        <div class="station-name">関西国際空港駅 <span class="romaji">Kansai-Airport Sta. (KIX)</span></div>
+        <div class="lines">
+          <span class="line-tag line-jr">JR</span>
+          <span class="line-tag line-nankai">南海</span>
+        </div>
+      </div>
+      <div class="brief"><strong>備用：</strong>本次行程不走 KIX，但若改從關西機場出入境：出關後走連絡橋到 Aeroport 大廳 2F，車站在 JR/南海共用大樓 2F。搭 HARUKA 去京都看 JR 閘口；Rapid Service 去大阪天王寺也在 JR 側。</div>
+      <div class="videos">
+        <a class="video" href="https://www.youtube.com/watch?v=hIao9MhGD3w" target="_blank" rel="noopener">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/hIao9MhGD3w/mqdefault.jpg" alt=""></div>
+          <div class="meta">
+            <div class="title">關西國際空港第1航廈 → JR / 南海關西空港駅 走路路線</div>
+            <div class="tag">YouTube · 日文實拍</div>
+          </div>
+        </a>
+        <a class="video" href="https://www.youtube.com/watch?v=PrnDj_LVQTE" target="_blank" rel="noopener">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/PrnDj_LVQTE/mqdefault.jpg" alt=""></div>
+          <div class="meta">
+            <div class="title">JR三ノ宮(西口) ↔ 関西国際空港 機場巴士乘車處實拍</div>
+            <div class="tag">YouTube · 替代路線</div>
+          </div>
+        </a>
+        <a class="video" href="https://www.youtube.com/watch?v=Z5cQ_-niUak" target="_blank" rel="noopener">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/Z5cQ_-niUak/mqdefault.jpg" alt=""></div>
+          <div class="meta">
+            <div class="title">関空 → 京都駅 特急はるか 全程實搭</div>
+            <div class="tag">YouTube · HARUKA 特急</div>
+          </div>
+        </a>
+      </div>
+      <div class="actions">
+        <a class="btn primary" href="https://www.google.com/maps/search/?api=1&query=Kansai+Airport+Station" target="_blank" rel="noopener">關西機場 Maps</a>
+      </div>
+    </section>
+
+    <section class="station">
+      <div class="head">
+        <div class="station-name">大阪難波駅 <span class="romaji">Osaka-Namba Sta.</span></div>
+        <div class="lines">
+          <span class="line-tag line-hanshin">阪神</span>
+          <span class="line-tag line-kintetsu">近鐵</span>
+        </div>
+      </div>
+      <div class="brief"><strong>備用：</strong>阪神神戶三宮搭快速急行來的列車 <strong>直通進近鐵大阪難波</strong>同月台，不用換月台就直通奈良/橿原。若列車只到難波需在此轉車。</div>
+      <div class="videos">
+        <a class="video" href="https://www.youtube.com/watch?v=xtWqIVa2BLE" target="_blank" rel="noopener">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/xtWqIVa2BLE/mqdefault.jpg" alt=""></div>
+          <div class="meta">
+            <div class="title">【なんば乗換】南海線 → 近鉄・阪神線 走路路線</div>
+            <div class="tag">YouTube · 南海換近鐵</div>
+          </div>
+        </a>
+        <a class="video" href="https://www.youtube.com/watch?v=8prmRpC4yFE" target="_blank" rel="noopener">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/8prmRpC4yFE/mqdefault.jpg" alt=""></div>
+          <div class="meta">
+            <div class="title">御堂筋線なんば駅 → 近鐵/阪神大阪難波駅 走路</div>
+            <div class="tag">YouTube · 地鐵換近鐵</div>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <section class="station">
+      <div class="head">
+        <div class="station-name">大阪阿部野橋駅 ↔ JR天王寺駅 <span class="romaji">Abenobashi / Tennoji</span></div>
+        <div class="lines">
+          <span class="line-tag line-kintetsu">近鐵南大阪/吉野線</span>
+          <span class="line-tag line-jr">JR 天王寺</span>
+        </div>
+      </div>
+      <div class="brief"><strong>備用：</strong>去吉野山的替代路線 — 從這裡搭近鐵南大阪線的特急「吉野さくらライナー」。近鐵阿部野橋駅位在 JR 天王寺駅對面地下街 (MIO/Abeno Harukas 那側)。</div>
+      <div class="videos">
+        <a class="video" href="https://www.youtube.com/watch?v=uTGKM9F1K2I" target="_blank" rel="noopener">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/uTGKM9F1K2I/mqdefault.jpg" alt=""></div>
+          <div class="meta">
+            <div class="title">近鐵阿部野橋駅 → JR天王寺駅 最短路線</div>
+            <div class="tag">YouTube · 實拍走法</div>
+          </div>
+        </a>
+        <a class="video" href="https://www.youtube.com/watch?v=gopNTLCwk_Q" target="_blank" rel="noopener">
+          <div class="thumb"><img src="https://i.ytimg.com/vi/gopNTLCwk_Q/mqdefault.jpg" alt=""></div>
+          <div class="meta">
+            <div class="title">大阪阿部野橋 → 吉野 特急さくらライナー 全程前面展望</div>
+            <div class="tag">YouTube · 整段車程可預習</div>
+          </div>
+        </a>
+      </div>
+    </section>
+
+  </div>
+</details>
+
+</main>
+
+<footer>
+  關西 6 日完整攻略 v1 · 2026/04/11 整合<br>
+  合併自：交通攻略 v2 (docx) + 車站走路導覽 v1 (html)<br>
+  所有影片 © 原作者 / YouTube · 此份檔案僅為連結整理
+</footer>
+
+</body>
+</html>
